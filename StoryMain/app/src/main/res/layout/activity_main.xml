@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="mitpi.dpstatus.videostatus.MainActivity">
+<ScrollView
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/animation"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    />
+            </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+>
+                <ImageView
+                    android:id="@+id/dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/icon_dp"/>
+                <ImageView
+                    android:id="@+id/status"
+                    android:layout_width="120dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/icon_status"
+                    android:text="Status" />
+               </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/rateus"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/rate_us_black"
+                    android:text="Status" />
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/share_it"
+                    android:text="Status" />
+
+            </LinearLayout>
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    ads:adSize="SMART_BANNER"
+                    ads:adUnitId="@string/banner_ads" />
+
+        </LinearLayout>
+
+</ScrollView>
+</LinearLayout>
