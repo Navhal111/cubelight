@@ -38,7 +38,7 @@
                             android:id="@+id/post_image_view"
                             android:tag="image_tag"
                             android:layout_width="match_parent"
-                            android:layout_height="350dp"
+                            android:layout_height="370dp"
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             />

@@ -16,9 +16,30 @@ import mitpi.dpstatus.videostatus.R
 import com.google.android.gms.ads.AdRequest
 import kotlinx.android.synthetic.main.activity_main.*
 import pl.droidsonroids.gif.GifDrawable
+import org.jetbrains.anko.toast
+import android.view.MotionEvent
 
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity(), SimpleGestureFilter.SimpleGestureListener {
+    override fun onSwipe(direction: Int) {
+        var intent = Intent(applicationContext, AboutActivity::class.java)
+        when (direction) {
+            SimpleGestureFilter.SWIPE_RIGHT ->
+                startActivity(intent)
+        }
+    }
+
+    override fun onDoubleTap() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun dispatchTouchEvent(me: MotionEvent): Boolean {
+        this.detector!!.onTouchEvent(me)
+        return super.dispatchTouchEvent(me)
+    }
+
+    private var detector: SimpleGestureFilter? = null
     private val REQUEST_WRITE_EXTERNAL_STORAGE = 1
     private var pressBackToast: Toast? = null
     private val SPLASH_TIME_OUT = 13000
@@ -27,6 +48,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        detector = SimpleGestureFilter(this, this)
+
+
         pressBackToast = Toast.makeText(applicationContext, R.string.press_back_again_to_exit,
                 Toast.LENGTH_SHORT)
         val adRequest = AdRequest.Builder()

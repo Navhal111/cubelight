@@ -16,11 +16,10 @@ class DpActivity : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         rootView = inflater!!.inflate(R.layout.activity_dp, container, false)
-//        rootView.recyclerView.layoutManager = GridLayoutManager(rootView.context,2)
-//        rootView.recyclerView.adapter = StatusDisplay()
 
         rootView.boys.setOnClickListener{
             val intent = Intent(rootView.context, DpListActivity::class.java)
+//
             intent.putExtra("keyName", "Whatsappstatusvideoas");
             startActivity(intent)
 
@@ -28,6 +27,11 @@ class DpActivity : Fragment() {
         rootView.girls.setOnClickListener {
             val intent = Intent(rootView.context, DpListActivity::class.java)
             intent.putExtra("keyName", "aswhatsappstatusvideo");
+            startActivity(intent)
+        }
+        rootView.cute.setOnClickListener{
+            val intent = Intent(rootView.context, DpListActivity::class.java)
+            intent.putExtra("keyName", "Cutedpas");
             startActivity(intent)
         }
         return rootView

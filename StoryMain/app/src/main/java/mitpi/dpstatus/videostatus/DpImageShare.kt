@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import com.bumptech.glide.Glide
 import mitpi.dpstatus.videostatus.R
 import com.github.johnpersano.supertoasts.library.Style
 import com.github.johnpersano.supertoasts.library.SuperActivityToast
@@ -29,12 +30,14 @@ class DpImageShare : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.image_share_set)
-        val adRequest = AdRequest.Builder()
-                .build()
-        adView.loadAd(adRequest)
+
         try {
+            val adRequest = AdRequest.Builder()
+                    .build()
+            adView.loadAd(adRequest)
         url = intent.getStringExtra("image")
         thumimage = intent.getStringExtra("imagethum")
+//            Glide.with(this).load(url).into(post_image_view)
         Picasso.with(this).load(url).into(post_image_view);
         }catch (e:NullPointerException){
             ToastInstallApp("No Image Get From Server")

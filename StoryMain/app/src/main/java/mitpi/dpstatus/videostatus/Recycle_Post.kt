@@ -44,14 +44,14 @@ class Recycle_Post(var name: JSONArray,var ads :InterstitialAd): RecyclerView.Ad
             }
         }
         var json_post: JSONObject
-        json_post = name.getJSONObject(position)
-        var url = json_post.getString("display_src")
+        json_post = name.getJSONObject(position).getJSONObject("node")
+        var url = json_post.getString("display_url")
         Glide.with(context1).load(url).into(holder!!.image)
         holder.image.setOnClickListener{
            try{
-               var ImageObject:JSONObject = json_post.getJSONArray("thumbnail_resources").getJSONObject(0)
+//               var ImageObject:JSONObject = json_post.getJSONArray("thumbnail_resources").getJSONObject(0)
                var intent = Intent(context1, DpImageShare::class.java)
-               intent.putExtra("imagethum",ImageObject.getString("src"))
+               intent.putExtra("imagethum",json_post.getString("thumbnail_src"))
                intent.putExtra("image",url)
                context1.startActivity(intent)
                click_event+=1

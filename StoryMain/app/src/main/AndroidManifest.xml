@@ -8,26 +8,27 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
-        android:name="mitpi.dpstatus.videostatus.MyApplication"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="mitpi.dpstatus.videostatus.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="mitpi.dpstatus.videostatus.StatusActivity" />
-        <activity android:name="mitpi.dpstatus.videostatus.DpListActivity" />
-        <activity android:name="mitpi.dpstatus.videostatus.MainTab" />
-        <activity android:name="mitpi.dpstatus.videostatus.DpImageShare" />
-        <activity android:name="mitpi.dpstatus.videostatus.VideosList" />
-        <activity android:name="mitpi.dpstatus.videostatus.MainVideoView"></activity>
+        <activity android:name=".StatusActivity" />
+        <activity android:name=".DpListActivity" />
+        <activity android:name=".MainTab" />
+        <activity android:name=".DpImageShare" />
+        <activity android:name=".VideosList" />
+        <activity android:name=".MainVideoView" />
+        <activity android:name=".AboutActivity"></activity>
     </application>
 
 </manifest>

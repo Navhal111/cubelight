@@ -134,7 +134,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
-                                    JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                    JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                     JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                     String filnename = Title+" $ "+VideoId+".mp4";
                                     downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -182,7 +182,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
-                                    JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                    JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                     JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                     String filnename = Title+" $ "+VideoId+".mp4";
                                     boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -242,7 +242,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                             e.printStackTrace();
                                         }
                                         DownloadBAr.setVisibility(View.VISIBLE);
-                                        JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                        JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                         JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                         String filnename = Title+" $ "+VideoId+".mp4";
                                         boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -295,7 +295,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                             e.printStackTrace();
                                         }
                                         DownloadBAr.setVisibility(View.VISIBLE);
-                                        JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                        JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                         JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                         String filnename = Title+" $ "+VideoId+".mp4";
                                         boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -347,7 +347,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                             e.printStackTrace();
                                         }
                                         DownloadBAr.setVisibility(View.VISIBLE);
-                                        JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                        JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                         JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                         String filnename = Title+" $ "+VideoId+".mp4";
                                         boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -401,7 +401,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                             e.printStackTrace();
                                         }
                                         DownloadBAr.setVisibility(View.VISIBLE);
-                                        JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                        JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                         JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                         String filnename = Title+" $ "+VideoId+".mp4";
                                         boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -454,7 +454,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                             e.printStackTrace();
                                         }
                                         DownloadBAr.setVisibility(View.VISIBLE);
-                                        JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                        JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                         JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                         String filnename = Title+" $ "+VideoId+".mp4";
                                         boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
@@ -512,7 +512,7 @@ public class MainVideoView extends YouTubeBaseActivity implements YouTubePlayer.
                                         e.printStackTrace();
                                     }
                                     DownloadBAr.setVisibility(View.VISIBLE);
-                                    JSONArray MainJson=getJson("https://www.zaasmart.com/ytd/getvideo.php?videoid="+VideoId+"&type=Download");
+                                    JSONArray MainJson=getJson("https://youtubemydown.000webhostapp.com/getvideo.php?videoid="+VideoId+"&type=Download");
                                     JSONObject MainJsonObj = MainJson.getJSONObject(0);
                                     String filnename = Title+" $ "+VideoId+".mp4";
                                     boolean set1 = downloadFromUrl(MainJsonObj.getString("url"),"Sad Status",filnename);
