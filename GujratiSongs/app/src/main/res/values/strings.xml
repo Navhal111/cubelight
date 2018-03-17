@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Gujrati Songs</string>
+    <string name="getids">http://kyraa.gitlab.io/kyraa/status/gujratisong.json</string>
+</resources>
